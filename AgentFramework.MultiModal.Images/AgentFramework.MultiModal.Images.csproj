@@ -17,4 +17,10 @@
 		<ProjectReference Include="..\AgentFramework.Common\AgentFramework.Common.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Update="quote.jpg">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
 </Project>

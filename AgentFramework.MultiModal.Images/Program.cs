@@ -17,9 +17,13 @@ var agentClient = new ChatClientAgent(chatClient, name: name, description: descr
 var chatSession = await agentClient.CreateSessionAsync();
 
 var textContent = new TextContent("Translate the text in the image to Dutch.");
-var urlContent = new UriContent("https://cdn.vectorstock.com/i/1000v/71/18/french-welcome-print-typography-vector-7817118.jpg", "image/jpeg");
-var inlineImageContent = new DataContent(new byte[] { 0x01, 0x02, 0x03 }, "image/jpeg");
+var urlContent = new UriContent("https://djohnnie.blob.core.windows.net/temp/quote.jpg", "image/jpeg");
+var binaryData = await File.ReadAllBytesAsync("quote.jpg");
+var inlineImageContent = new DataContent(binaryData, "image/jpeg");
 
-var response = await agentClient.RunAsync(new ChatMessage(ChatRole.User, [textContent, urlContent]), chatSession);
+var response1 = await agentClient.RunAsync(new ChatMessage(ChatRole.User, [textContent, urlContent]), chatSession);
+var response2 = await agentClient.RunAsync(new ChatMessage(ChatRole.User, [textContent, inlineImageContent]), chatSession);
 
-Console.WriteLine(response.Text);
+Console.WriteLine(response1.Text);
+Console.WriteLine("--------------------------------------------------");
+Console.WriteLine(response2.Text);

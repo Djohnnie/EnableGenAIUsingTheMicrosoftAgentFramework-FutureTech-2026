@@ -17,4 +17,13 @@
 		<ProjectReference Include="..\AgentFramework.Common\AgentFramework.Common.csproj" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Update="carl-sagan.mp3">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	  <None Update="dag-vriendjes.mp3">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+
 </Project>
