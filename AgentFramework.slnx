@@ -43,4 +43,20 @@
   <Folder Name="/12. Agent Framework with Embeddings/">
     <Project Path="AgentFramework.Embeddings/AgentFramework.Embeddings.csproj" Id="33ece6df-52d4-4c15-8721-cdf63d22e987" />
   </Folder>
+  <Folder Name="/13. Agent Framework wit custom multi-agent management/">
+    <Project Path="MijnCopilot/MijnCopilot.Agents/MijnCopilot.Agents.csproj" />
+    <Project Path="MijnCopilot/MijnCopilot.Application/MijnCopilot.Application.csproj" />
+    <Project Path="MijnCopilot/MijnCopilot.Contracts/MijnCopilot.Contracts.csproj" />
+    <Project Path="MijnCopilot/MijnCopilot.DataAccess/MijnCopilot.DataAccess.csproj" />
+    <Project Path="MijnCopilot/MijnCopilot.Model/MijnCopilot.Model.csproj" />
+    <Project Path="MijnCopilot/MijnCopilot.Web/MijnCopilot.Web.csproj" />
+  </Folder>
+  <Folder Name="/14. Agent Framework wit custom multi-agent management in Orleans/">
+    <Project Path="MijnCopilot.Orleans/MijnCopilot.Agents/MijnCopilot.Agents.csproj" />
+    <Project Path="MijnCopilot.Orleans/MijnCopilot.Application/MijnCopilot.Application.csproj" />
+    <Project Path="MijnCopilot.Orleans/MijnCopilot.Contracts/MijnCopilot.Contracts.csproj" />
+    <Project Path="MijnCopilot.Orleans/MijnCopilot.Model/MijnCopilot.Model.csproj" />
+    <Project Path="MijnCopilot.Orleans/MijnCopilot.Web/MijnCopilot.Web.csproj" />
+    <Project Path="MijnCopilot.Orleans/MijnCopilot.Orleans.Host/MijnCopilot.Orleans.Host.csproj" />
+  </Folder>
 </Solution>
