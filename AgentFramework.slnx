@@ -40,4 +40,7 @@
     <Project Path="AgentFramework.McpSseClient/AgentFramework.McpSseClient.csproj" />
     <Project Path="AgentFramework.McpSseServer/AgentFramework.McpSseServer.csproj" />
   </Folder>
+  <Folder Name="/12. Agent Framework with Embeddings/">
+    <Project Path="AgentFramework.Embeddings/AgentFramework.Embeddings.csproj" Id="33ece6df-52d4-4c15-8721-cdf63d22e987" />
+  </Folder>
 </Solution>
