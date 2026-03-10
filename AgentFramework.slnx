@@ -2,31 +2,39 @@
   <Folder Name="/00. Common/">
     <Project Path="AgentFramework.Common/AgentFramework.Common.csproj" />
   </Folder>
-  <Folder Name="/01. Microsoft Agent Framework Chat/">
+  <Folder Name="/01. Agent Framework Chat/">
     <Project Path="AgentFramework.Chat/AgentFramework.Chat.csproj" />
   </Folder>
-  <Folder Name="/02. Microsoft Agent Framework Chat History/">
+  <Folder Name="/02. Agent Framework Chat History/">
     <Project Path="AgentFramework.ChatHistory/AgentFramework.ChatHistory.csproj" />
   </Folder>
-  <Folder Name="/03. Microsoft Agent Framework Chat History with Persona/">
+  <Folder Name="/03. Agent Framework Chat History with Persona/">
     <Project Path="AgentFramework.ChatPersona/AgentFramework.ChatPersona.csproj" />
   </Folder>
-  <Folder Name="/04. Microsoft Agent Framework Plugins and Functions/">
+  <Folder Name="/04. Agent Framework Plugins and Functions/">
     <Project Path="AgentFramework.PluginsAndFunctions/AgentFramework.PluginsAndFunctions.csproj" />
   </Folder>
-  <Folder Name="/05. Microsoft Agent Framework using Azure OpenAI/">
+  <Folder Name="/05. Agent Framework with Structured Output/">
+    <Project Path="AgentFramework.StructuredOutput/AgentFramework.StructuredOutput.csproj" Id="9c0f72cc-a01e-4039-a0a8-5225ec6b614b" />
+  </Folder>
+  <Folder Name="/06. Agent Framework using Azure OpenAI/">
     <Project Path="AgentFramework.AzureOpenAiAgent/AgentFramework.AzureOpenAiAgent.csproj" />
   </Folder>
-  <Folder Name="/06. Microsoft Agent Framework using Ollama/">
+  <Folder Name="/07. Agent Framework using Ollama/">
     <Project Path="AgentFramework.OllamaAgent/AgentFramework.OllamaAgent.csproj" />
   </Folder>
-  <Folder Name="/07. Microsoft Agent Framework MCP interacting with GitHub Server/">
-    <Project Path="AgentFramework.AgentUsingGitHubMcpServer/AgentFramework.AgentUsingGitHubMcpServer.csproj" />
+  <Folder Name="/08. Agent Framework using Foundry Agent/">
+    <Project Path="AgentFramework.FoundryAgent/AgentFramework.FoundryAgent.csproj" Id="9aaace9a-c20c-45a0-95f2-6b0d0d3bae4a" />
   </Folder>
-  <Folder Name="/08. Microsoft Agent Framework MCP interacting with Google Maps Server/">
+  <Folder Name="/09. Agent Framework with multimodal models/">
+    <Project Path="AgentFramework.MultiModal.Audio/AgentFramework.MultiModal.Audio.csproj" Id="e384abd9-e120-4ccc-81c6-9a6f332a1e76" />
+    <Project Path="AgentFramework.MultiModal.Images/AgentFramework.MultiModal.Images.csproj" Id="b0b45d1c-e6d7-448b-bacc-2f6165690f7c" />
+  </Folder>
+  <Folder Name="/10. Agent Framework MCP Client/">
+    <Project Path="AgentFramework.AgentUsingGitHubMcpServer/AgentFramework.AgentUsingGitHubMcpServer.csproj" />
     <Project Path="AgentFramework.AgentUsingGoogleMapsMcpServer/AgentFramework.AgentUsingGoogleMapsMcpServer.csproj" />
   </Folder>
-  <Folder Name="/09. MCP Server-Client/">
+  <Folder Name="/11. MCP Server-Client/">
     <Project Path="AgentFramework.McpClient/AgentFramework.McpClient.csproj" />
     <Project Path="AgentFramework.McpServer/AgentFramework.McpServer.csproj" />
     <Project Path="AgentFramework.McpSseClient/AgentFramework.McpSseClient.csproj" />
