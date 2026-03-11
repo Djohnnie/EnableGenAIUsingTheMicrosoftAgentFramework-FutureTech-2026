@@ -16,6 +16,11 @@ internal static class OrchestratorAgent
 
         Handoff rules:
         - Unaswered questions regarding current date and time -> handoff to TimeAgent.
+        - Unanswered questions regarding my sauna -> handoff to MijnSaunaAgent.
+        - Unanswered questions regarding my car -> handoff to MijnThuisCarAgent.
+        - Unanswered questions regarding my solar installation -> handoff to MijnThuisSolarAgent.
+        - Unanswered questions regarding my heating -> handoff to MijnThuisHeatingAgent.
+        - Unanswered questions regarding photos that are currently showed -> handoff to PhotoCarouselAgent.
         - Any remaining general questions -> handoff to GeneralAgent.
 
         If there are no remaining pending questions, return a summary of the answers to the user.";

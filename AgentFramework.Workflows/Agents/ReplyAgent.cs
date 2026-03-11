@@ -7,7 +7,7 @@ namespace AgentFramework.Workflows.Agents;
 internal static class ReplyAgent
 {
     private const string NAME = nameof(ReplyAgent);
-    private const string DESCRIPTION = "Agent that combines multiple answer into a single reply.";
+    private const string DESCRIPTION = nameof(ReplyAgent);
     private const string INSTRUCTIONS = "You should combine multiple answers into a single reply.";
     private const string MODEL = "gpt-4o";
 
