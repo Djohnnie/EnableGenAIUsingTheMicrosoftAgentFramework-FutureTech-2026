@@ -1,5 +1,8 @@
 ﻿using AgentFramework.Workflows.Agents;
+using Azure.AI.Agents.Persistent;
 using Azure.AI.OpenAI;
+using Azure.Core;
+using Azure.Identity;
 using Microsoft.Agents.AI.Workflows;
 using Microsoft.Extensions.AI;
 using System.ClientModel;
@@ -10,11 +13,20 @@ var key = Environment.GetEnvironmentVariable("OPENAI_KEY") ?? string.Empty;
 var saunaMcpEndpoint = Environment.GetEnvironmentVariable("MIJNSAUNA_MCP") ?? string.Empty;
 var thuisMcpEndpoint = Environment.GetEnvironmentVariable("MIJNTHUIS_MCP") ?? string.Empty;
 var photoCarouselMcpEndpoint = Environment.GetEnvironmentVariable("PHOTOCAROUSEL_MCP") ?? string.Empty;
+var tenantId = Environment.GetEnvironmentVariable("TENANT_ID") ?? string.Empty;
+var clientId = Environment.GetEnvironmentVariable("CLIENT_ID") ?? string.Empty;
+var clientSecret = Environment.GetEnvironmentVariable("CLIENT_SECRET") ?? string.Empty;
+var foundryUri = Environment.GetEnvironmentVariable("FOUNDRY_URI") ?? string.Empty;
 
 var client = new AzureOpenAIClient(new Uri(endpoint), new ApiKeyCredential(key));
 
+var credential = new ClientSecretCredential(tenantId, clientId, clientSecret);
+string[] scopes = ["https://cognitiveservices.azure.com/.default"];
+AccessToken token = credential.GetToken(new TokenRequestContext(scopes));
+var persistentClient = new PersistentAgentsClient(foundryUri, credential);
+
 var orchestratorAgent = OrchestratorAgent.Create(client);
-var generalAgent = GeneralAgent.Create(client);
+var generalAgent = await GeneralAgent.Create(persistentClient, "asst_ycAatzTZRDE4NqetS6USQwsQ");
 var timeAgent = TimeAgent.Create(client);
 var saunaAgent = await MijnSaunaAgent.Create(client, saunaMcpEndpoint);
 var carAgent = await MijnThuisCarAgent.Create(client, thuisMcpEndpoint);

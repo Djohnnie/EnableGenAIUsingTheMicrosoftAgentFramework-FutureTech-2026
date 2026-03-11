@@ -1,4 +1,4 @@
-﻿using Azure.AI.OpenAI;
+﻿using Azure.AI.Agents.Persistent;
 using Microsoft.Agents.AI;
 using Microsoft.Extensions.AI;
 
@@ -11,12 +11,19 @@ internal static class GeneralAgent
     private const string INSTRUCTIONS = @"
         You should answer all general questions.
         You should handoff the answer back to the OrchestratorAgent.";
-    private const string MODEL = "gpt-5-chat";
 
-    public static AIAgent Create(AzureOpenAIClient client)
+    public static async Task<AIAgent> Create(PersistentAgentsClient client, string agentId)
     {
-        var chatClient = client.GetChatClient(MODEL).AsIChatClient();
-        var agentClient = new ChatClientAgent(chatClient, NAME, DESCRIPTION, INSTRUCTIONS);
+        var agentClient = await client.GetAIAgentAsync(agentId, new ChatClientAgentOptions
+        {
+            Name = NAME,
+            Description = DESCRIPTION,
+            ChatOptions = new ChatOptions
+            {
+                Instructions = INSTRUCTIONS
+            }
+        });
+
         return agentClient;
     }
 }
